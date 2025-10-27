@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUANTINNOV - L'Ingénierie 360° au Service de Votre Vision</title>
+    <!-- Chargement de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuration de la police Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Configuration Tailwind pour l'esthétique et la réactivité -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'quant-primary': '#1E3A8A', // Bleu foncé professionnel
+                        'quant-accent': '#06B6D4',  // Cyan/Teal pour l'innovation
+                        'quant-light': '#F1F5F9', // Gris très clair
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Icônes Lucide -->
+    <script type="module">
+        import { createIcons, Activity, Zap, Layers, Cpu, Compass, HardHat, Bolt, ShieldCheck, Box } from 'https://cdn.skypack.dev/lucide?dts';
+        createIcons({ icons: { Activity, Zap, Layers, Cpu, Compass, HardHat, Bolt, ShieldCheck, Box } });
+    </script>
+    <style>
+        /* Style général et scroll doux */
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #ffffff;
+        }
+        /* Style des boutons d'action */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+        }
+        .cta-button:hover {
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- 1. Navigation (Header) -->
+    <header class="sticky top-0 z-50 bg-white border-b border-quant-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo/Nom de l'entreprise -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-3xl text-quant-accent font-extrabold tracking-tight">Q</span>
+                <span class="text-2xl font-bold text-quant-primary">UANTINNOV</span>
+            </a>
+            <!-- Menu de navigation (Masqué sur mobile, simple lien de contact) -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#engagement" class="text-gray-600 hover:text-quant-primary transition duration-150">Engagement</a>
+                <a href="#domaines" class="text-gray-600 hover:text-quant-primary transition duration-150">Ingénierie 360°</a>
+                <a href="#bim" class="text-gray-600 hover:text-quant-primary transition duration-150">Avantage BIM</a>
+                <a href="#contact" class="text-white bg-quant-accent hover:bg-quant-primary px-4 py-2 rounded-full cta-button">Contact</a>
+            </nav>
+            <!-- Bouton Hamburger (Placeholder) -->
+            <button class="md:hidden text-quant-primary focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 2. Section Héro (Résumé Exécutif) -->
+    <section id="engagement" class="bg-quant-light py-16 sm:py-24 text-center rounded-b-2xl shadow-xl">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-quant-primary mb-6">
+                L'Ingénierie <span class="text-quant-accent">360°</span> au Service de Votre Vision
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                Quantinnov est votre <strong class="text-quant-primary">PARTENAIRE technique agile et fiable</strong>, spécialisé dans les services multi-techniques qui catalysent la réussite de vos projets.
+            </p>
+            <div class="text-lg bg-quant-primary text-white p-6 rounded-xl shadow-lg mb-12 border-l-4 border-quant-accent">
+                <p>
+                    <span class="font-bold">Notre Engagement :</span> Réduction significative des coûts internes et des charges fixes tout en garantissant l'excellence de vos livrables.
+                </p>
+            </div>
+            <!-- CTA Principal -->
+            <a href="#contact" class="inline-block px-10 py-4 text-lg font-semibold text-white bg-quant-accent rounded-full cta-button hover:bg-quant-primary">
+                Démarrer votre Projet avec un Partenaire d'Excellence
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. Section Notre Domaine d'Intervention – L'Ingénierie 360° -->
+    <section id="domaines" class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold text-quant-primary text-center mb-12">
+                Notre Domaine d'Intervention – L'Ingénierie 360°
+            </h2>
+
+            <!-- 3.1 Les Secteurs de l'Innovation -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-6 border-b pb-2 border-quant-accent/50">
+                2.1. Les Secteurs de l'Innovation
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-16">
+                <!-- Carte Secteur -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-quant-accent hover:shadow-xl transition duration-300">
+                    <i data-lucide="hard-hat" class="w-8 h-8 text-quant-accent mb-3"></i>
+                    <h4 class="font-bold text-lg text-quant-primary">Bâtiment & Infrastructures</h4>
+                    <p class="text-sm text-gray-500">Construction neuve et réhabilitation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-quant-accent hover:shadow-xl transition duration-300">
+                    <i data-lucide="zap" class="w-8 h-8 text-quant-accent mb-3"></i>
+                    <h4 class="font-bold text-lg text-quant-primary">Énergie & Réseaux</h4>
+                    <p class="text-sm text-gray-500">Optimisation et sécurisation des systèmes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-quant-accent hover:shadow-xl transition duration-300">
+                    <i data-lucide="cpu" class="w-8 h-8 text-quant-accent mb-3"></i>
+                    <h4 class="font-bold text-lg text-quant-primary">Smart Building & City</h4>
+                    <p class="text-sm text-gray-500">Intégration des technologies intelligentes et connectées.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-quant-accent hover:shadow-xl transition duration-300">
+                    <i data-lucide="layers" class="w-8 h-8 text-quant-accent mb-3"></i>
+                    <h4 class="font-bold text-lg text-quant-primary">Modélisation Industrielle</h4>
+                    <p class="text-sm text-gray-500">Processus de conception et simulation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-quant-accent hover:shadow-xl transition duration-300">
+                    <i data-lucide="bolt" class="w-8 h-8 text-quant-accent mb-3"></i>
+                    <h4 class="font-bold text-lg text-quant-primary">Bureau d’Étude Électrique</h4>
+                    <p class="text-sm text-gray-500">Études BT/HT et systèmes intelligents.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-quant-accent hover:shadow-xl transition duration-300">
+                    <i data-lucide="activity" class="w-8 h-8 text-quant-accent mb-3"></i>
+                    <h4 class="font-bold text-lg text-quant-primary">Numérique & IT</h4>
+                    <p class="text-sm text-gray-500">Solutions d'infrastructure et gestion de données.</p>
+                </div>
+            </div>
+
+            <!-- 3.2 L'Excellence Technique – Notre Savoir-Faire Multi-Technique -->
+            <h3 class="text-2xl font-semibold text-gray-700 mb-6 border-b pb-2 border-quant-accent/50">
+                2.2. L'Excellence Technique – Notre Savoir-Faire Multi-Technique
+            </h3>
+            <div class="space-y-8">
+                <!-- Pôle Électricité -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border-l-8 border-quant-primary">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i data-lucide="shield-check" class="w-10 h-10 text-quant-primary"></i>
+                        <h4 class="text-xl font-bold text-quant-primary">Pôle Électricité & Systèmes Intelligents</h4>
+                    </div>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2 text-sm sm:text-base">
+                        <li>Études BT/HT, éclairage, sécurité, IRVE (Infrastructure de Recharge pour Véhicules Électriques).</li>
+                        <li>Intégration de GTB, GTC, IoT et smart grids.</li>
+                        <li>Conception sur mesure assurant des installations performantes, sûres et évolutives.</li>
+                    </ul>
+                </div>
+
+                <!-- Pôle Structure -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border-l-8 border-quant-primary">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <i data-lucide="box" class="w-10 h-10 text-quant-primary"></i>
+                        <h4 class="text-xl font-bold text-quant-primary">Pôle Structure, Génie Civil et Environnement</h4>
+                    </div>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-2 text-sm sm:text-base">
+                        <li>Analyse, conception et optimisation structurelle.</li>
+                        <li>Prise en compte des contraintes environnementales et réglementaires.</li>
+                    </ul>
+                </div>
+
+                <!-- Prestations Flexibles -->
+                <div class="bg-quant-accent/10 p-4 rounded-xl text-center font-semibold text-quant-primary">
+                    Prestations Flexibles : Études techniques externalisées ou en appui direct de vos équipes internes.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Section L'Avantage Compétitif BIM -->
+    <section id="bim" class="bg-quant-primary py-16 sm:py-20 text-white rounded-t-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                    L'Avantage Compétitif BIM
+                </h2>
+                <p class="text-quant-accent text-xl font-medium">Maîtrise Digitale de la Conception pour une exécution sans faille.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Colonne 1: Texte d'introduction -->
+                <div class="space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        Notre force réside dans la fusion de l'ingénierie technique et de la Conception Digitale, avec le <strong class="text-quant-accent">BIM (Building Information Modeling)</strong> comme pilier central. Cette intégration garantit une précision et une coordination inégalées.
+                    </p>
+                    <p class="font-light italic text-gray-300">
+                        Objectif : Éliminer les erreurs coûteuses avant la phase de construction et garantir l'alignement de toutes les parties prenantes.
+                    </p>
+                    <!-- Espace pour l'image symbolique BIM -->
+                    <div class="bg-quant-accent/20 p-4 rounded-lg text-center font-semibold text-white">
+                        
+                    </div>
+                </div>
+
+                <!-- Colonne 2: Pôle Conception Digitale & Modélisation BIM -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-semibold text-quant-accent mb-4">
+                        3.1. Pôle Conception Digitale & Modélisation BIM
+                    </h3>
+                    <div class="space-y-4">
+                        <!-- Service BIM 1 -->
+                        <div class="flex items-start space-x-3 bg-quant-primary/80 p-4 rounded-xl shadow-lg border-l-4 border-quant-accent">
+                            <i data-lucide="compass" class="w-6 h-6 text-quant-accent mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Modélisation BIM Multi-lots</h4>
+                                <p class="text-sm text-gray-300">Création de maquettes numériques intelligentes pour la détection automatique de conflits (Architecture, Structure, MEP).</p>
+                            </div>
+                        </div>
+                        <!-- Service BIM 2 -->
+                        <div class="flex items-start space-x-3 bg-quant-primary/80 p-4 rounded-xl shadow-lg border-l-4 border-quant-accent">
+                            <i data-lucide="layers" class="w-6 h-6 text-quant-accent mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Plans AutoCAD 2D/3D</h4>
+                                <p class="text-sm text-gray-300">Production de plans techniques détaillés et conformes pour toutes les phases du projet.</p>
+                            </div>
+                        </div>
+                        <!-- Service BIM 3 -->
+                        <div class="flex items-start space-x-3 bg-quant-primary/80 p-4 rounded-xl shadow-lg border-l-4 border-quant-accent">
+                            <i data-lucide="zap" class="w-6 h-6 text-quant-accent mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Numérisation de l’Existant</h4>
+                                <p class="text-sm text-gray-300">Acquisition précise des données (scan 3D, digitalisation de plans) pour rénovation ou audit.</p>
+                            </div>
+                        </div>
+                        <!-- Service BIM 4 -->
+                        <div class="flex items-start space-x-3 bg-quant-primary/80 p-4 rounded-xl shadow-lg border-l-4 border-quant-accent">
+                            <i data-lucide="cpu" class="w-6 h-6 text-quant-accent mt-1 flex-shrink-0"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Coordination et Gestion Documentaire BIM</h4>
+                                <p class="text-sm text-gray-300">Centralisation de l'information et facilitation de la collaboration entre toutes les parties prenantes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Section Contact (Formulaire simplifié) -->
+    <section id="contact" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-quant-primary mb-4">
+                Discutons de Votre Prochain Projet
+            </h2>
+            <p class="text-gray-600 mb-8">
+                Nous sommes le partenaire de confiance pour le développement et l’adaptation de nos clients sur le marché. Remplissez ce formulaire pour une prise de contact rapide.
+            </p>
+            
+            <form class="space-y-6 text-left p-6 bg-quant-light rounded-xl shadow-lg">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nom et Prénom / Société</label>
+                    <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-quant-accent focus:border-quant-accent" placeholder="Votre nom ou société">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Adresse E-mail</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-quant-accent focus:border-quant-accent" placeholder="contact@example.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Votre besoin (Ingénierie, BIM, Consulting...)</label>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-quant-accent focus:border-quant-accent" placeholder="Décrivez brièvement votre projet et vos attentes..."></textarea>
+                </div>
+                <button type="submit" class="w-full px-6 py-3 text-lg font-semibold text-white bg-quant-accent rounded-lg cta-button hover:bg-quant-primary">
+                    Envoyer ma Demande
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col md:flex-row justify-center md:justify-between items-center space-y-4 md:space-y-0 text-sm">
+                <div class="text-lg font-semibold">QUANTINNOV</div>
+                <div class="space-x-6">
+                    <a href="#engagement" class="hover:text-quant-accent transition duration-150">Engagement</a>
+                    <a href="#domaines" class="hover:text-quant-accent transition duration-150">Domaines</a>
+                    <a href="#bim" class="hover:text-quant-accent transition duration-150">BIM</a>
+                </div>
+            </div>
+            <p class="mt-6 text-xs text-gray-400">© 2025 QUANTINNOV. Tous droits réservés. L'Ingénierie au service de votre excellence.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
